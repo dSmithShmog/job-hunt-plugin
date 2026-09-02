@@ -5,10 +5,13 @@ description: |
   job-hunt skill reads from: profile, voice rules, templates, and examples.
   Extracts the user's writing voice from real samples and interviews for
   what samples can't show. Use when: "set up my job hunt workspace",
-  "/job-hunt:init", the first run of any job-hunt skill, or "update my
-  voice/profile for job applications".
+  "/job-hunt:init", the first run of any job-hunt skill (missing
+  ~/.claude/job-hunt/config.md), "onboard my resume/letters into job-hunt",
+  "migrate my job-hunt setup to this machine", or "update my voice/profile
+  for job applications".
 argument-hint: "[workspace path]"
 user-invocable: true
+allowed-tools: Read, Write, Edit, Glob, Grep, Bash(git:*), Bash(mkdir:*), Bash(ls:*)
 ---
 
 # Job Hunt Init
@@ -115,6 +118,15 @@ each (role, company type, what the user liked about it). If the workspace is
 a git repo, commit everything. Then summarize what was set up and point at
 the next step: `/job-hunt:resume-tailor` or `/job-hunt:cover-letter` for a
 real posting.
+
+## Done when (validate before declaring finished)
+
+- [ ] `~/.claude/job-hunt/config.md` exists with `workspace:` and `master_resume:` set to real paths.
+- [ ] All five workspace paths exist (`profile.md`, `voice.md`, `templates/`, `examples/`, `applications/`).
+- [ ] Every number in the career-facts inventory was read back and confirmed by the user.
+- [ ] `voice.md` passed the calibration test in the extraction guide ("does this sound like you?" = yes).
+- [ ] `templates/README.md` records a compile command and a verify step, even for a Markdown starter.
+- [ ] If the workspace is a git repo: committed. If it's inside a public repo: refused and re-asked.
 
 ## Rules
 
