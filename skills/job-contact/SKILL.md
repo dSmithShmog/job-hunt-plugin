@@ -153,6 +153,11 @@ says the user applied, and says briefly who they are. Nothing else.
   openers/closers override this default register.
 - Duration honesty: use the career start / duration facts recorded in
   profile.md; flag which number a draft uses.
+- **Corrections compound.** When the user rejects a phrasing, bans a
+  pattern, or confirms an opener/closer, record it (dated) in voice.md's
+  `## Outreach` section before finishing — a correction that lives only
+  in the chat dies with the session. New personal facts go to profile.md
+  under its third-party rules.
 
 ## Deliverable
 

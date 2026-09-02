@@ -180,3 +180,9 @@ plugin repo.
 Apply `voice.md` as the source of truth. Generic floor: direct, first-person,
 concrete, no résumé clichés ("results-driven," "synergize," "passionate
 about"). When unsure, write plainer, not fancier.
+
+**Corrections compound.** When the user rewords a bullet, rejects a phrasing,
+or corrects a fact or number during iteration, record the durable lesson
+(dated) in `voice.md` (style) or `profile.md` (facts) before finishing — a
+correction that lives only in the chat dies with the session. Recorded
+corrections outrank old examples when they conflict.
