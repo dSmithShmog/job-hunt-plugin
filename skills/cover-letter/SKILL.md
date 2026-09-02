@@ -185,6 +185,18 @@ revert their wording without asking. Flag typos; fix only on their word. When
 they ask for options, give 3–5 labeled variants with a pick and a reason — no
 file edits during option rounds.
 
+**Corrections compound — write them down at the moment they happen.** When
+the user bans a word or pattern, corrects a fact, names a preferred structure,
+confirms a motivation, or volunteers a new personal fact, record it in
+`voice.md` (style, register, structure) or `profile.md` (facts, anchors,
+constraints) with a date, before the task is finished — not at the end of the
+session. A correction that lives only in the chat dies with the session, and
+the next session repeats the mistake. Recorded corrections outrank
+`examples/`: when an example letter and a recorded correction conflict, the
+correction wins — mark the superseded pattern in `voice.md` rather than
+deleting the example. New third-party facts get recorded under the
+third-party rules already in `profile.md`.
+
 ### 8. Open ended questions and essay fields
 
 Answer whatever step 2 found on the form. Each answer expands the letter with
