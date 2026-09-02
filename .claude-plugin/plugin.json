@@ -1,0 +1,9 @@
+{
+  "name": "job-hunt",
+  "description": "Job-application toolkit: tailor resumes, draft cover letters, and find outreach contacts in YOUR voice. Ships zero personal data; /job-hunt:init builds a private local workspace holding your profile, voice rules, and templates.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Dillan Smith",
+    "url": "https://github.com/dSmithShmog"
+  }
+}

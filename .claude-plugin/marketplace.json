@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "job-hunt",
+  "description": "Job-application toolkit for Claude Code: resume tailoring, story-driven cover letters, and verified outreach contacts, driven by a private local voice/profile workspace.",
+  "owner": {
+    "name": "Dillan Smith",
+    "url": "https://github.com/dSmithShmog"
+  },
+  "plugins": [
+    {
+      "name": "job-hunt",
+      "description": "Tailor resumes, draft cover letters, and find outreach contacts in your own voice. No personal data ships in the plugin; /job-hunt:init builds a private workspace.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}
