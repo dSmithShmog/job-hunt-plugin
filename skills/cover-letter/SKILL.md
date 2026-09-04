@@ -36,7 +36,7 @@ Company-specific work lives in `<workspace>/applications/<company>/`
 
 | File (in `applications/<company>/`) | Role |
 |------|------|
-| `cover.<Company>.md` | Letter text. THE file to edit. `#` lines are notes, never shown in output. Blank line = new paragraph. |
+| `cover.<Company>.md` | Letter text. THE file to edit, written at the first draft (see step 5) so the user edits it directly. `#` lines are notes, never shown in output. Blank line = new paragraph. |
 | Layout/source file per `templates/` | Layout only; reads the `.md` at compile time. Copy from an existing cover template and update its internal references (title, read path). Only if the toolchain uses a separate layout file. |
 | `<LastnameFirstname or per templates>_<Company>_Cover.pdf` | Output. Distinct name from the resume PDF. |
 | `essay.<Company>.md` | Answers to the application's open ended questions. One heading per question, carrying the verbatim prompt and its word or character limit. Only if the form asks any. |
@@ -156,7 +156,25 @@ The opener line, the P3 opener, and the closer come from the user's signature
 moves and approved lines in `voice.md`. Study `examples/` for how these letters
 actually sound before you write them.
 
-### 6. Self-review before showing the draft
+**Write the draft to the files, always — never paste it only into chat.** The
+`.md` is the source of truth from the first draft on, not a file you create
+after approval. As soon as you have a draft:
+
+1. Create the company folder (lowercase) if it does not exist.
+2. Write the drafted text into `cover.<Company>.md`, with the `#` note header
+   from an existing example (compile command, edit reminder, role line, draft
+   version and word count).
+3. Create the layout/source file the toolchain needs by copying an existing
+   cover's layout and updating its internal references (title metadata, the
+   role subtitle, and the `read()` path). Skip only if `templates/` uses a
+   single-file toolchain with no separate layout.
+
+Then paste the draft text into your reply for convenience and tell the user the
+exact `.md` path so they can edit the letter directly in the file. The user
+edits files, not chat transcripts — a draft that lives only in your reply makes
+them dictate changes back to you instead of just opening the file.
+
+### 6. Self-review before handing off the draft
 
 - **Kill AI tells:** correlative constructions ("not X, but Y", "I don't mean
   X. I mean Y"), aphoristic balance closes, "worth a look?", significance-
@@ -179,7 +197,9 @@ actually sound before you write them.
 
 ### 7. Iterate with the user — their edits are canon
 
-The user rewrites drafts. When they do: diff, infer why each change was made,
+The user rewrites drafts by editing `cover.<Company>.md` directly. Read the
+file back to pick up their changes rather than assuming your last draft still
+stands. When they do: diff, infer why each change was made,
 give ranked feedback (must-fix grammar/typos → weak lines → nits), and never
 revert their wording without asking. Flag typos; fix only on their word. When
 they ask for options, give 3–5 labeled variants with a pick and a reason — no
